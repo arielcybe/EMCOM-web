@@ -15,7 +15,7 @@ html{
  *               Utilidades
  *=============================================**/
 .container{
-    max-width: 120rem;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -30,9 +30,11 @@ html{
  *=============================================**/
 .container-hero{
     background-color: whitesmoke;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 0 20px;
+    transition: all 0.5s ease;
 }
 
 .hero{
@@ -55,6 +57,7 @@ html{
 
 .navbar .menu{
     display: flex;
+    margin-top: 2.5rem;
     gap: 20px; /* Espacio entre los elementos del menú */
 }
 
@@ -67,29 +70,14 @@ html{
     color: #002563; /* Cambia el color según necesites */
 }
 
-.menu li img {
-    width: 24px; /* Ajusta el tamaño deseado */
-    height: 24px; /* Ajusta el tamaño deseado */
-}
-
-.menu a::after{
-    content: '';
-    width: 1.5rem;
-    height: 1px;
-    background-color: white;
-    position: absolute;
-    bottom: -3px;
-    left: 50px;
-    opacity: 0;
-    transition: all .3s ease;
-}
-
-.menu a:hover::after{
-    opacity: 1;
-}
-
 .menu a:hover{
     color: #e12424;
+}
+
+.menu li img{
+    width: 24px; /* Ajusta el tamaño deseado */
+    height: 24px; /* Ajusta el tamaño deseado */
+    margin-top: -4px;
 }
 /**============================================
  *               Banner
@@ -123,6 +111,7 @@ html{
 .main-content{
     background-color: #efefef;
     padding: 0 3rem;
+    padding-bottom: 2rem;
 }
 
 .top-categories{
@@ -132,7 +121,7 @@ html{
     margin-bottom: 3rem;
 }
 /**============================================
- *               Pricipales
+ *               Principales servicios
  *=============================================**/
 .container-categories{
     display: grid;
@@ -204,18 +193,42 @@ html{
 .servicios-ofrecido{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 3rem;
 }
-
-/*------------------ Reservado para botones de desplazamiento -----------------*/
 
 /*------------------ Servicios -----------------*/
 
-.container-servicios{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 3rem;
+.container-servicios {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.container-servicios::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores webkit */
+}
+
+.scrolling{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/*------------------ Botones de desplazamiento -----------------*/
+
+.scrolling span{
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.card-servicio {
+    flex: 0 0 20rem; /* Mantiene las tarjetas de tamaño consistente */
+    scroll-snap-align: start;
 }
 
 .card-servicio {
@@ -269,18 +282,78 @@ html{
     grid-column: 1/-1;
     font-weight: 400;
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+}
+ /**============================================
+  *               Footer
+  *=============================================**/
+.footer{
+    background-color: #fe8344;
+    font-size: 18px;
+    text-align: center;
+    padding: 2rem;
+}
+.footer p{
+    color: white;
+}
+/**============================================
+ *               Barra móvil
+ *=============================================**/
+.barra{
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    background-color: #fe8344;
+    transition: all 0.5s ease;
+    position: static;
+    gap: 1rem;
+    bottom: 0;
+    z-index: 1000; /* Para que quede por encima del contenido */
 }
 
+.barra li{
+    list-style: none;
+}
 
+.barra p{
+    margin-top: 0.5rem;
+    color: white;
+}
 
+.barra img{
+    width: 30px;
+}
 
+.container-redes{
+    display: flex;
+    gap: 0.5rem;
+}
 
+.cotizar-bottom{
+    position: relative; /* Necesario para que el ::after se posicione correctamente */
+    background-color: #007cdc;
+    padding: 0.5rem 3rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evita que el ::after se salga de los bordes */
+    margin-left: 5rem;
+}
 
+.cotizar-bottom span{
+    color: white;
+}
 
+.subir-button{
+    margin-left: 5rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+}
 
-
-
+.barra.active{
+    position: sticky; /* Fija la barra al tope de la pantalla */
+    transform: translateY(0); /* La muestra al hacer scroll */
+}
 
 
 
