@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-EMCOM</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cotizador-EMCOM</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
                         <ul class="menu">
                             <li><a href="#">Servicios</a></li>
                             <li><a href="#">Cursos</a></li>
-                            <li><a href="formulario.html">Cotiza con nosotros</a></li>
+                            <li><a href="#">Cotiza con nosotros</a></li>
                             <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
                             <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
                             <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
@@ -30,49 +30,42 @@
             </div>
         </div>
     </header>
-    <section class="banner">
-        <div class="content-banner">
-            <h1>Quienes somos</h1>
-            <p>Emprende Comex, es un Freight Forwarder especialistas en Comercio Exterior. Con calidad de servicio, orientadas a las Empresas que desean aprender a importar, como a las que ya tienen vasta trayectoria.<br><br>Además somos especialistas en las áreas de capacitación y asesoría, con nuestros cursos de Comex, chino e inglés.</p>
+
+<!--================= Formulario ================-->
+    <section class="form-order">
+        <div class="form-content">
+            <h2>Cotizador</h2>
+            <form>
+                <label for="name">Nombre</label>
+                <input type="text" name="Nombre" id="name">
+    
+                <label for="email">Correo electrónico</label>
+                <input type="text" name="Correo" id="email">
+    
+                <label for="enterprise">Empresa</label>
+                <input type="text" name="Empresa" id="enterprise">
+    
+                <label for="adress">Dirección</label>
+                <input type="text" name="Dirección" id="adress">
+    
+                <label for="city">Ciudad</label>
+                <input type="text" name="Ciudad" id="city">
+    
+                <label for="phone">Teléfono</label>
+                <input type="text" name="Teléfono" id="phone">
+    
+                <label for="service">Servicio</label>
+                <select name="" id="service">
+                    <option value="">Opciones</option>
+                    <option value="">Importación</option>
+                    <option value="">Capacitación</option>
+                    <option value="">Certificación</option>
+                    <option value="">Temas legales y patentes</option>
+                    <option value="">Temas contables</option>
+                </select>
+            </form>
         </div>
-    </section>
-
-<!--================= Servicios Ofrecidos ================-->
-
-    <main class="main-content">
-        <section class="content top-categories">
-            <h1 class="heading-1">Servicios que ofrecemos</h1>
-            <!--================= Botónes de desplazamiento ================--> 
-            <div class="servicios-srcolling"><!-- Despalaza los servicios hacia un lado --->
-                <div class="container-categories">
-                    <div class="card-category category-importacion">
-                        <h2>Importación</h2>
-                        <span>Ver más</span>
-                    </div>
-                    <div class="card-category category-curso">
-                        <h2>Capacitación</h2>
-                        <span>Ver más</span>
-                    </div>
-                    <div class="card-category category-certificacion">
-                        <h2>Certificación</h2>
-                        <span>Ver más</span>
-                    </div>
-                    <div class="card-category category-legales">
-                        <h2>Temas legales y patentes</h2>
-                        <span>Ver más</span>
-                    </div>
-                    <div class="card-category category-contables">
-                        <h2>Temas contables</h2>
-                        <span>Ver más</span>
-                    </div>
-                </div>
-            </div>
-            <div class="scrolling">
-                <span class="button-left">&#9664;</span>
-                <span class="button-right">&#9654;</span>
-            </div>
-        </section>
-    </main>
+    </section>    
 
 <!--================= Footer y barra móvil ================-->
 

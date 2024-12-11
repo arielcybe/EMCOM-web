@@ -80,160 +80,45 @@ html{
     margin-top: -4px;
 }
 /**============================================
- *               Banner
+ *               Formulario
  *=============================================**/
-.banner{
-    background-image: linear-gradient(100deg, #00256390, #00256340), url(images/puerto_valparaiso.jpg);
-    height: 800px;
-    background-size: cover;
+.form-order{
+    padding-left: 22%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.form-content{
+    background: linear-gradient(
+        50deg,
+        rgb(225, 35, 35) 50%,
+        #e12424),
+        url(puerto_valparaiso.jpg);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    width: 1000px;
+    border-radius: 25px;
 }
 
-.content-banner{
-    max-width: 100rem;
-    margin: 0 auto;
-    padding: 18rem 0;
-}
-
-.content-banner h1{
+.form-content h2{
     color: white;
-    font-size: 3rem;
+    font-size: 40px;
+    margin-bottom: 25px;
+
 }
 
-.content-banner p{
-    color: #f5f5f5;
-    width: 700px;
-    font-size: 1.5rem;
-}
-/**============================================
- *               Contenido
- *=============================================**/
-.main-content{
-    background-color: #efefef;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 2rem;
-}
-
-.top-categories{
+.form-content form{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-/**============================================
- *               Servicios
- *=============================================**/
-.container-categories{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-top: -2rem;
+    width: 50%;
 }
 
-.container-categories::-webkit-scrollbar{
-    display: none;
-}
-
-.card-category{
-    flex: 0 0 100%;/* distribuye las cartas en una fila */
-
-    height: 20rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2rem;
-    gap: 2rem;
-}
-
-/*================== Tarjetas de servicios =================*/
-
-.category-importacion{
-    background-image: linear-gradient(#00000080, #00000080), url(images/back-containers.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.category-curso{
-    background-image: linear-gradient(#00000080, #00000080), url(images/back-capacitacion.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.category-certificacion{
-    background-image: linear-gradient(#00000080, #00000080), url(images/back-certificacion.png);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.category-legales{
-    background-image: linear-gradient(#00000080, #00000080), url(images/back-tribunal.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.category-contables{
-    background-image: linear-gradient(#00000080, #00000080), url(images/back-contabilidad.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-}
-
-.card-category h2{
-    font-size: 2.5rem;
+.form-content label{
+    font-size: 17px;
     color: white;
-    text-transform: capitalize;
-    position: relative;
-}
-
-.card-category h2::after{
-    content: '';
-    width: 2.5rem;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    bottom: -1rem;
-    left: 50%;
-    transform: translate(-50%, 50%);
-}
-
-.card-category span{
-    font-size: 1.6rem;
-    color: white;
-    cursor: pointer;
-    user-select: none; /* Bloquea la selección */
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none; /* Compatibilidad con Firefox */
-}
-
-.card-category span:hover{
-    color: #e12424;
-}
-
-/*================== Botones de scrolling =================*/
-
-.scrolling{
-    display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.scrolling span{
-    font-size: 1.6rem;
-    color: #e12424;
-    cursor: pointer;
-     user-select: none; /* Bloquea la selección */
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none; /* Compatibilidad con Firefox */
+    margin-bottom: 10px;
 }
 /**============================================
   *               Footer
@@ -310,14 +195,3 @@ html{
     position: sticky; /* Fija la barra al tope de la pantalla */
     transform: translateY(0); /* La muestra al hacer scroll */
 }
-
-
-
-
-
-
-
-
-
-
-

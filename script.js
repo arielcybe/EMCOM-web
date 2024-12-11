@@ -1,16 +1,19 @@
 /**============================================
  *          Botones de desplazamiento
  *=============================================**/
-const containerServicios = document.querySelector('.container-servicios');
+const containerServicios = document.querySelector('.container-categories');
 const buttonLeft = document.querySelector('.button-left');
 const buttonRight = document.querySelector('.button-right');
 
+// Calcula el ancho de una tarjeta (100% del viewport)
+const cardWidth = containerServicios.offsetWidth;
+
 buttonLeft.addEventListener('click', () => {
-    containerServicios.scrollBy({ left: -300, behavior: 'smooth' });
+    containerServicios.scrollBy({ left: -cardWidth, behavior: 'smooth' });
 });
 
 buttonRight.addEventListener('click', () => {
-    containerServicios.scrollBy({ left: 300, behavior: 'smooth' });
+    containerServicios.scrollBy({ left: cardWidth, behavior: 'smooth' });
 });
 /**============================================
  *               Barra Móvil
