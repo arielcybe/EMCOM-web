@@ -296,7 +296,7 @@ html{
     -moz-user-select: none; /* Compatibilidad con Firefox */
 }
 
-.cotizar-bottom span{
+.cotizar-bottom a{
     color: white;
 }
 

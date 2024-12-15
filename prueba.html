@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--================= CSS ================-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Dinámico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .hidden {
+            display: none; /* Ocultar secciones inicialmente */
+        }
+        .section {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Formulario Dinámico con Opciones Dependientes</h2>
+
+    <form id="formulario">
+        <!-- Primera opción desplegable -->
+        <label for="categoria">Selecciona una categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="">-- Selecciona una opción --</option>
+            <option value="frutas">Frutas</option>
+            <option value="verduras">Verduras</option>
+            <option value="bebidas">Bebidas</option>
+        </select>
+
+        <!-- Sección Frutas -->
+        <div id="section-frutas" class="section hidden">
+            <h3>Formulario de Frutas</h3>
+            <label for="fruta">Elige una fruta:</label>
+            <select id="fruta" name="fruta">
+                <option value="manzana">Manzana</option>
+                <option value="banana">Banana</option>
+                <option value="naranja">Naranja</option>
+            </select>
+            <label for="cantidad-frutas">Cantidad:</label>
+            <input type="number" id="cantidad-frutas" name="cantidad-frutas" placeholder="Ingresa cantidad">
+        </div>
+
+        <!-- Sección Verduras -->
+        <div id="section-verduras" class="section hidden">
+            <h3>Formulario de Verduras</h3>
+            <label for="verdura">Elige una verdura:</label>
+            <select id="verdura" name="verdura">
+                <option value="lechuga">Lechuga</option>
+                <option value="tomate">Tomate</option>
+                <option value="zanahoria">Zanahoria</option>
+            </select>
+            <label for="peso-verduras">Peso (kg):</label>
+            <input type="number" id="peso-verduras" name="peso-verduras" placeholder="Ingresa peso en kg">
+        </div>
+
+        <!-- Sección Bebidas -->
+        <div id="section-bebidas" class="section hidden">
+            <h3>Formulario de Bebidas</h3>
+            <label for="bebida">Elige una bebida:</label>
+            <select id="bebida" name="bebida">
+                <option value="agua">Agua</option>
+                <option value="jugo">Jugo</option>
+                <option value="cafe">Café</option>
+            </select>
+            <label for="cantidad-bebidas">Cantidad de botellas:</label>
+            <input type="number" id="cantidad-bebidas" name="cantidad-bebidas" placeholder="Ingresa cantidad de botellas">
+        </div>
+    </form>
+
+<!--================= JavaScript ================-->
+
+    <script>
+        // Elementos del formulario
+        const categoriaSelect = document.getElementById('categoria');
+        const sectionFrutas = document.getElementById('section-frutas');
+        const sectionVerduras = document.getElementById('section-verduras');
+        const sectionBebidas = document.getElementById('section-bebidas');
+
+        // Evento para mostrar la sección correspondiente
+        categoriaSelect.addEventListener('change', () => {
+            // Ocultar todas las secciones al inicio
+            sectionFrutas.classList.add('hidden');
+            sectionVerduras.classList.add('hidden');
+            sectionBebidas.classList.add('hidden');
+
+            // Mostrar la sección según la selección
+            const seleccion = categoriaSelect.value;
+            if (seleccion === 'frutas') {
+                sectionFrutas.classList.remove('hidden');
+            } else if (seleccion === 'verduras') {
+                sectionVerduras.classList.remove('hidden');
+            } else if (seleccion === 'bebidas') {
+                sectionBebidas.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

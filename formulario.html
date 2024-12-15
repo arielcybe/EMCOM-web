@@ -32,7 +32,8 @@
     </header>
 
 <!--================= Formulario ================-->
-    <section class="form-order">
+
+    <main class="form-order">
         <div class="form-content">
             <h2>Cotizador</h2>
             <form>
@@ -54,18 +55,30 @@
                 <label for="phone">Teléfono</label>
                 <input type="text" name="Teléfono" id="phone">
     
-                <label for="service">Servicio</label>
-                <select name="" id="service">
-                    <option value="">Opciones</option>
-                    <option value="">Importación</option>
-                    <option value="">Capacitación</option>
-                    <option value="">Certificación</option>
-                    <option value="">Temas legales y patentes</option>
-                    <option value="">Temas contables</option>
+                <label for="categoria">Servicio</label>
+                <select name="categoria" id="categoria">
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="import">Importación</option>
+                    <option value="training">Capacitación</option>
+                    <option value="certification">Certificación</option>
+                    <option value="laws">Temas legales y patentes</option>
+                    <option value="countable">Temas contables</option>
                 </select>
             </form>
         </div>
-    </section>    
+    </main>
+
+<!--================= Fosrmularios secundarios ================-->
+    <!--================= Importación ================-->
+    
+    <section class="select-content">
+        <form class="option-content">
+            <div id="section-import" class="section hidden">
+                <label for="product-import">Importacion</label>
+                <input type="text" name="Importacion" id="product-import">
+            </div>
+        </form>
+    </section>
 
 <!--================= Footer y barra móvil ================-->
 
@@ -81,9 +94,6 @@
                 <li><a href="#"><img src="images/facebook-circle.png" alt="ws"></a></li>
             </ul>
         </div>
-        <div class="cotizar-bottom">
-            <span>Cotiza aquí</span>
-        </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
                 <ellipse cx="12" cy="12" rx="10.5" ry="10.5" fill="#007cdc"/>
@@ -97,6 +107,6 @@
             <p>Copyright © 2024 EMCOM | Funciona con EMCOM</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>

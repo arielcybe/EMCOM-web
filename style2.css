@@ -82,6 +82,10 @@ html{
 /**============================================
  *               Formulario
  *=============================================**/
+body{
+    background-color: #d8d8d8;
+}
+
 .form-order{
     padding-left: 22%;
     padding-top: 3rem;
@@ -91,9 +95,9 @@ html{
 .form-content{
     background: linear-gradient(
         50deg,
-        rgb(225, 35, 35) 50%,
-        #e12424),
-        url(puerto_valparaiso.jpg);
+        #e12323,
+        #e1242420),
+        url(images/puerto_valparaiso.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -119,6 +123,56 @@ html{
     font-size: 17px;
     color: white;
     margin-bottom: 10px;
+}
+
+input , textarea{
+    background-color: #ffffffb3;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+    padding: 17px 14px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #007cdc; /* Borde con color */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    background-color: #f9f9f9; /* Color de fondo */
+    appearance: none; /* Elimina el estilo nativo del navegador */
+    cursor: pointer;
+}
+
+/* Agrega una flecha personalizada usando background */
+select {
+    background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23007cdc"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 20px;
+}
+
+/* Opciones del select */
+option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/*================== Formulario elegido =================*/
+/* .hidden {
+    display: none;
+} */
+
+:focus{
+    outline: 1px solid #1e92e9;
+}
+
+.select-content{
+    background-color: #333;
+    height: 100px;
 }
 /**============================================
   *               Footer
@@ -164,25 +218,6 @@ html{
 .container-redes{
     display: flex;
     gap: 0.5rem;
-}
-
-.cotizar-bottom{
-    position: relative; /* Necesario para que el ::after se posicione correctamente */
-    background-color: #007cdc;
-    padding: 0.5rem 3rem;
-    border-radius: .5rem;
-    cursor: pointer;
-    box-shadow: 0 0 .2rem rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Evita que el ::after se salga de los bordes */
-    margin-left: 5rem;
-     user-select: none; /* Bloquea la selección */
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none; /* Compatibilidad con Firefox */
-}
-
-.cotizar-bottom span{
-    color: white;
 }
 
 .subir-button{
