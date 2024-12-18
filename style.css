@@ -167,8 +167,10 @@ html{
 }
 
 .form form {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
     display: flex;
     flex-direction: column;
+    gap: 10px; /* Espaciado entre elementos dentro de una columna */
     width: 50%;
 }	
 
