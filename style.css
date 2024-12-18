@@ -390,6 +390,82 @@ option {
     transform: translateY(0); /* La muestra al hacer scroll */
 }
 
+/**============================================
+ *               servicios html
+ *=============================================**/
+
+ main.description-services {
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 4%;
+    max-width: 96%;
+}
+
+.service-section {
+    background-color: #f8f8f8; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: left;
+    height: auto;
+}
+
+.service-section h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 26px;
+    margin-bottom: 6px;
+}
+
+.service-section p {
+    width: 1000px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.cursos li {
+    margin-left: 30px;
+    width: 1000px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#importacion {
+    background-image: linear-gradient(#00000080, #00000080), url(images/back-containers.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#capacitacion {
+    background-image: linear-gradient(#00000080, #00000080), url(images/back-capacitacion.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#certificacion {
+    background-image: linear-gradient(#00000080, #00000080), url(images/back-certificacion.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#temas-legales {
+    background-image: linear-gradient(#00000080, #00000080), url(images/back-tribunal.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#temas-contables {
+    background-image: linear-gradient(#00000080, #00000080), url(images/back-contabilidad.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 
