@@ -183,7 +183,10 @@ html{
     color: white;
     font-size: 40px;
     margin-bottom: 25px;
+    display: flex;
 }
+
+
 
 .hidden {
     display: none;
