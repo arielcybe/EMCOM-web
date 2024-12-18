@@ -283,7 +283,7 @@ option {
     transform: translate(-50%, 50%);
 }
 
-.card-category span{
+.card-category a{
     font-size: 1.6rem;
     color: white;
     cursor: pointer;
@@ -293,7 +293,7 @@ option {
     -moz-user-select: none; /* Compatibilidad con Firefox */
 }
 
-.card-category span:hover{
+.card-category a:hover{
     color: #e12424;
 }
 
@@ -316,9 +316,6 @@ option {
     -ms-user-select: none;
     -moz-user-select: none; /* Compatibilidad con Firefox */
 }
-
-
-
 
 /**============================================
   *               Footer
@@ -400,7 +397,7 @@ option {
  *               servicios html
  *=============================================**/
 
- main.description-services {
+main.description-services {
     margin: 20px auto;
     padding: 20px;
     padding-bottom: 4%;
