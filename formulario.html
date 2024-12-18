@@ -41,7 +41,7 @@
 
     <main class="form">
 
-        < class="form-content">
+        <div class="form-content">
             <h2>Cotizador</h2>
             <form>
                     <label for="name">Nombre</label>
@@ -73,6 +73,16 @@
                     <option value="laws">Temas legales y patentes</option>
                     <option value="countable">Contabilidad</option>
                 </select>
+
+                <div id="section-importacion" class="hidden">
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais">
+                        <option value="">-- Selecciona un país --</option>
+                        <option value="chile">Chile</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="mexico">México</option>
+                    </select>
+                </div>
             </form>
         </div>
     </main> 
