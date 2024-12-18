@@ -147,6 +147,81 @@ html{
     gap: 2rem;
 }
 
+/**============================================
+ *               Formulario
+ *=============================================**/
+.form{
+    
+    background: linear-gradient(
+        50deg,
+        #e12323,
+        #e1242420),
+        url(images/puerto_valparaiso.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    width: 1000px;
+    border-radius: 25px;
+    
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}	
+
+.form label {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 10px;
+}
+.form-content h2{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 25px;
+
+}
+
+input , textarea{
+    background-color: #ffffffb3;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #333;
+    padding: 17px 14px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+select {	
+    width: 100%;
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #007cdc; /* Borde con color */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    background-color: #f9f9f9; /* Color de fondo */
+    appearance: none; /* Elimina el estilo nativo del navegador */
+    cursor: pointer;
+
+}
+
+/* Agrega una flecha personalizada usando background */
+select {
+    background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%23007cdc"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 20px;
+}
+
+/* Opciones del select */
+option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+
 /*================== Tarjetas de servicios =================*/
 
 .category-importacion{
@@ -235,6 +310,10 @@ html{
     -ms-user-select: none;
     -moz-user-select: none; /* Compatibilidad con Firefox */
 }
+
+
+
+
 /**============================================
   *               Footer
   *=============================================**/

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador-EMCOM</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario Básico</title>
 </head>
-
 <body>
     <header>
+
+    <section>
         <div class="container-hero">
-            <div class="container hero">
-                <div class="container-logo">
-                    <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200"></a>
-                </div>
+        <div class="container hero">
+        <div class="container-logo">
+            <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200">
+        </div>
+               
                 <div class="container-navbar">
                     <nav class="navbar container">
                         <ul class="menu">
@@ -29,31 +31,31 @@
                 </div> 
             </div>
         </div>
+    </section>
     </header>
 
-<!--================= Formulario ================-->
-
-    <main class="form-order">
+    <main class="form">
+        
         <div class="form-content">
             <h2>Cotizador</h2>
             <form>
                 <label for="name">Nombre</label>
-                <input type="text" name="Nombre" id="name">
+                <input type="text" name="Nombre" id="name" required>
     
                 <label for="email">Correo electrónico</label>
-                <input type="text" name="Correo" id="email">
+                <input type="text" name="Correo" id="email" required>
     
                 <label for="enterprise">Empresa</label>
-                <input type="text" name="Empresa" id="enterprise">
+                <input type="text" name="Empresa" id="enterprise" required>
     
                 <label for="adress">Dirección</label>
-                <input type="text" name="Dirección" id="adress">
+                <input type="text" name="Dirección" id="adress" required>    
     
                 <label for="city">Ciudad</label>
-                <input type="text" name="Ciudad" id="city">
+                <input type="text" name="Ciudad" id="city" required>
     
                 <label for="phone">Teléfono</label>
-                <input type="text" name="Teléfono" id="phone">
+                <input type="text" name="Teléfono" id="phone" required>
     
                 <label for="categoria">Servicio</label>
                 <select name="categoria" id="categoria">
@@ -62,25 +64,28 @@
                     <option value="training">Capacitación</option>
                     <option value="certification">Certificación</option>
                     <option value="laws">Temas legales y patentes</option>
-                    <option value="countable">Temas contables</option>
+                    <option value="countable">Contabilidad</option>
+                </select>
+
+                <label for="pais">Pais</label>
+                <select name="Pais" id="pais">
+                    <option value="">-- Selecciona un Pais --</option>
+                    <option value="import">Argentina</option>
+                    <option value="training">China</option>
+                    <option value="certification">Colombia</option>
+                    <option value="laws">EEUU</option>
+                    <option value="countable">Medio Oriente</option>
+                    <option value="countable">Peru</option>
+
                 </select>
             </form>
         </div>
     </main>
 
-<!--================= Fosrmularios secundarios ================-->
-    <!--================= Importación ================-->
-    
-    <section class="select-content">
-        <form class="option-content">
-            <div id="section-import" class="section hidden">
-                <label for="product-import">Importacion</label>
-                <input type="text" name="Importacion" id="product-import">
-            </div>
-        </form>
-    </section>
 
-<!--================= Footer y barra móvil ================-->
+    
+
+    <!--================= Footer y barra móvil ================-->
 
     <div class="barra">
         <div class="direccion">
@@ -93,6 +98,9 @@
                 <li><a href="#"><img src="images/youtube-circle.png" alt="ws"></a></li>
                 <li><a href="#"><img src="images/facebook-circle.png" alt="ws"></a></li>
             </ul>
+        </div>
+        <div class="cotizar-bottom">
+            <a href="formulario.html">Cotiza aquí</a>
         </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -107,6 +115,6 @@
             <p>Copyright © 2024 EMCOM | Funciona con EMCOM</p>
         </div>
     </footer>
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
