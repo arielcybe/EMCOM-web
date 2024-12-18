@@ -184,6 +184,10 @@ html{
 
 }
 
+.hidden {
+    display: none;
+}
+
 input , textarea{
     background-color: #ffffffb3;
     border: 1px solid #ccc;

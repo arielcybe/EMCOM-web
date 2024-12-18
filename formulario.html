@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Formulario Básico</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -68,7 +73,15 @@
 
                 
                 </select>
-                    <!-- Nueva sección para Importación -->
+                <div id="section-importacion" class="hidden">
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais">
+                        <option value="">-- Selecciona un país --</option>
+                        <option value="chile">Chile</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="mexico">México</option>
+                    </select>
+                </div>
 
     </select>
 </div>
@@ -111,25 +124,20 @@
             <p>Copyright © 2024 EMCOM | Funciona con EMCOM</p>
         </div>
     </footer>
-    <script src="script.js"></script>
-
+   
     <script>
-        // Elementos del formulario
+        const categoriaSelect = document.getElementById('categoria');
         const sectionImportacion = document.getElementById('section-importacion');
-       
 
-        // Evento para mostrar la sección correspondiente
         categoriaSelect.addEventListener('change', () => {
-
-            // Ocultar todas las secciones al inicio
-            sectionImportacion.classList.add('hidden');
-
-            // Mostrar la sección según la selección
-            const seleccion = categoriaSelect.value;
-            if (sectionImportacion === 'importacion') {
+            if (categoriaSelect.value === 'importacion') {
                 sectionImportacion.classList.remove('hidden');
+            } else {
+                sectionImportacion.classList.add('hidden');
             }
         });
     </script>
+
+<script src="script.js"></script>
 </body>
 </html>
