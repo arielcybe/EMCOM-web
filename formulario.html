@@ -8,40 +8,37 @@
 </head>
 <body>
     <header>
-
-    <section>
-        <div class="container-hero">
-        <div class="container hero">
-        <div class="container-logo">
-            <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200">
-        </div>
-               
-                <div class="container-navbar">
-                    <nav class="navbar container">
-                        <ul class="menu">
-                            <li><a href="#">Servicios</a></li>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Cotiza con nosotros</a></li>
-                            <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
-                            <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
-                            <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
-                            <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
-                        </ul>
-                    </nav>
-                </div> 
+        <section>
+            <div class="container-hero">
+                <div class="container hero">
+                    <div class="container-logo">
+                        <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200">
+                    </div>    
+                    <div class="container-navbar">
+                        <nav class="navbar container">
+                            <ul class="menu">
+                                <li><a href="servicios.html">Servicios</a></li>
+                                <li><a href="#">Cursos</a></li>
+                                <li><a href="formulario.html">Cotiza con nosotros</a></li>
+                                <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
+                                <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
+                                <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
+                                <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
+                            </ul>
+                        </nav>
+                    </div> 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     </header>
 
     <main class="form">
-        
         <div class="form-content">
             <h2>Cotizador</h2>
             <form>
                 <label for="name">Nombre</label>
                 <input type="text" name="Nombre" id="name" required>
-    
+
                 <label for="email">Correo electrónico</label>
                 <input type="text" name="Correo" id="email" required>
     
@@ -65,21 +62,10 @@
                     <option value="certification">Certificación</option>
                     <option value="laws">Temas legales y patentes</option>
                     <option value="countable">Contabilidad</option>
-
-                
-                </select>
-                    <!-- Nueva sección para Importación -->
-
-    </select>
-</div>
-
                 </select>
             </form>
         </div>
-    </main>
-
-
-    
+    </main> 
 
     <!--================= Footer y barra móvil ================-->
 
@@ -112,11 +98,9 @@
         </div>
     </footer>
     <script src="script.js"></script>
-
     <script>
         // Elementos del formulario
         const sectionImportacion = document.getElementById('section-importacion');
-       
 
         // Evento para mostrar la sección correspondiente
         categoriaSelect.addEventListener('change', () => {
