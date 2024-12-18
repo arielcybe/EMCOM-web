@@ -167,8 +167,10 @@ html{
 }
 
 .form form {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
     display: flex;
     flex-direction: column;
+    gap: 10px; /* Espaciado entre elementos dentro de una columna */
     width: 50%;
 }	
 
@@ -182,6 +184,10 @@ html{
     font-size: 40px;
     margin-bottom: 25px;
 
+}
+
+.hidden {
+    display: none;
 }
 
 input , textarea{

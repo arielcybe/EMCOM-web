@@ -30,19 +30,15 @@ window.addEventListener('scroll', function(){
     }
 })
 
-// Agregar referencia a la nueva sección
+// Elementos del DOM
+const categoriaSelect = document.getElementById('categoria');
 const sectionImportacion = document.getElementById('section-importacion');
 
-// Evento para mostrar la sección correspondiente
+// Evento para cambiar la visibilidad del campo de país
 categoriaSelect.addEventListener('change', () => {
-    // Ocultar todas las secciones al inicio
-    sectionImportacion.classList.add('hidden');
-
-    // Mostrar la sección según la selección
-    const seleccion = categoriaSelect.value;
-    if (seleccion === 'importacion') {
+    if (categoriaSelect.value === 'importacion') {
         sectionImportacion.classList.remove('hidden');
-   
-       
+    } else {
+        sectionImportacion.classList.add('hidden');
     }
 });

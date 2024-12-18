@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Formulario Básico</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <section>
-            <div class="container-hero">
-                <div class="container hero">
-                    <div class="container-logo">
-                        <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200">
-                    </div>    
-                    <div class="container-navbar">
-                        <nav class="navbar container">
-                            <ul class="menu">
-                                <li><a href="servicios.html">Servicios</a></li>
-                                <li><a href="#">Cursos</a></li>
-                                <li><a href="formulario.html">Cotiza con nosotros</a></li>
-                                <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
-                                <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
-                                <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
-                                <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
-                            </ul>
-                        </nav>
-                    </div> 
+
+    <section>
+        <div class="container-hero">
+            <div class="container hero">
+                <div class="container-logo">
+                    <a class="logo" href="/"><img src="images/Logo EMCOM.png" width="200">
                 </div>
+                <div class="container-navbar">
+                    <nav class="navbar container">
+                        <ul class="menu">
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="#">Cursos</a></li>
+                            <li><a href="formulario.html">Cotiza con nosotros</a></li>
+                            <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
+                            <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
+                            <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
+                            <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
+                        </ul>
+                    </nav>
+                </div> 
             </div>
-        </section>
+        </div>
+    </section>
     </header>
 
     <main class="form">
@@ -41,19 +49,19 @@
 
                 <label for="email">Correo electrónico</label>
                 <input type="text" name="Correo" id="email" required>
-    
+
                 <label for="enterprise">Empresa</label>
                 <input type="text" name="Empresa" id="enterprise" required>
-    
+
                 <label for="adress">Dirección</label>
-                <input type="text" name="Dirección" id="adress" required>    
-    
+                <input type="text" name="Dirección" id="adress" required>
+
                 <label for="city">Ciudad</label>
                 <input type="text" name="Ciudad" id="city" required>
-    
+
                 <label for="phone">Teléfono</label>
                 <input type="text" name="Teléfono" id="phone" required>
-    
+
                 <label for="categoria">Servicio</label>
                 <select name="categoria" id="categoria">
                     <option value="">-- Selecciona una opción --</option>
@@ -66,6 +74,9 @@
             </form>
         </div>
     </main> 
+
+
+    
 
     <!--================= Footer y barra móvil ================-->
 
@@ -86,10 +97,12 @@
         </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-                <ellipse cx="12" cy="12" rx="10.5" ry="10.5" fill="#007cdc"/>
-                <path d="M15.5,12L12,8L8.5,12" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M15.5,17L12,13L8.5,17" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg></a>
+                    <ellipse cx="12" cy="12" rx="10.5" ry="10.5" fill="#007cdc" />
+                    <path d="M15.5,12L12,8L8.5,12" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15.5,17L12,13L8.5,17" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg></a>
         </div>
     </div>
     <footer class="footer">
@@ -98,22 +111,21 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script>
-        // Elementos del formulario
-        const sectionImportacion = document.getElementById('section-importacion');
 
+    <script>
+        const categoriaSelect = document.getElementById('categoria');
+        const sectionImportacion = document.getElementById('section-importacion');
         // Evento para mostrar la sección correspondiente
         categoriaSelect.addEventListener('change', () => {
-
-            // Ocultar todas las secciones al inicio
-            sectionImportacion.classList.add('hidden');
-
-            // Mostrar la sección según la selección
-            const seleccion = categoriaSelect.value;
-            if (sectionImportacion === 'importacion') {
+            if (categoriaSelect.value === 'importacion') {
                 sectionImportacion.classList.remove('hidden');
+            } else {
+                sectionImportacion.classList.add('hidden');
             }
         });
     </script>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
