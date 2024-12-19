@@ -40,76 +40,77 @@
     </header>
     
     <main class="form">
-        
         <div class="form-content"> 
             <h2>Cotizador</h2>
-                <form>
-                    <div class="columna">
-                        <label for="name">Nombre</label>
-                        <input type="text" name="Nombre" id="name" required>
-                    </div>
-                    
-                    <div class="columna">
-                        <label for="email">Correo electrónico</label>
-                        <input type="text" name="Correo" id="email" required>
-                    </div>
-                    
-                    <div class="columna">
-                        <label for="enterprise">Empresa</label>
-                        <input type="text" name="Empresa" id="enterprise" required>
-                    </div>
-                    
-                    <div class="columna">
-                        <label for="adress">Dirección</label>
-                        <input type="text" name="Dirección" id="adress" required>
-                    </div>
-                    
-                    <div class="columna">
-                        <label for="city">Ciudad</label>
-                        <input type="text" name="Ciudad" id="city" required>
-                    </div>
-                    
-                    
-                    <div class="columna">
-                       <label for="phone">Teléfono</label>
-                       <input type="text" name="Teléfono" id="phone" required> 
-                    </div>
-                    
-                    
-                            <div class="columna">
-                                <label for="categoria">Servicio</label>
-                                    <select name="categoria" id="categoria">
-                                        <option value="">-- Selecciona una opción --</option>
-                                        <option value="importacion">Importación</option>
-                                        <option value="training">Capacitación</option>
-                                        <option value="certification">Certificación</option>
-                                        <option value="laws">Temas legales y patentes</option>
-                                        <option value="countable">Contabilidad</option>
-                                    </select>
-                            </div>
-
-                        <div class="columna">
-                            <div id="section-importacion" class="hidden">
-                                    <label for="pais">País</label>
-                                <select name="pais" id="pais">
-                                    <option value="">-- Selecciona un país --</option>
-                                    <option value="chile">Chile</option>
-                                    <option value="argentina">Argentina</option>
-                                    <option value="mexico">México</option>
-                                </select>
-                            </div>
-                        </div>
-                            
-                        <div class="columna">
-                            <div id="section-merch" class="hidden">
-                                <label for="merch">Tipo de Mercancia</label>
-                                <input type="text" name="Mercancia" id="merch" required>
-                            </div>
-                        </div>          
-                </form>
+            <form>
+                <div class="columna">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="Nombre" id="name" required>
+                </div>
+                
+                <div class="columna">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" name="Correo" id="email" required>
+                </div>
+                
+                <div class="columna">
+                   <label for="phone">Teléfono</label>
+                   <input type="text" name="Teléfono" id="phone" required> 
+                </div>
+                
+                <div class="columna">
+                    <label for="categoria">Servicio</label>
+                    <select name="categoria" id="categoria">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="importacion">Importación</option>
+                        <option value="training">Capacitación</option>
+                        <option value="certification">Certificación</option>
+                        <option value="laws">Temas legales y patentes</option>
+                        <option value="countable">Contabilidad</option>
+                    </select>
+                </div>           
+            </form>
         </div>
-           
-    </main> 
+    </main>
+
+    <section class="import-form">
+        <div class="form2-content">
+            <div id="section-importacion" class="hidden">
+                <div class="columna2 columpais">
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais">
+                        <option value="">-- Seleccionar país de importe --</option>
+                        <option value="china">China</option>
+                        <option value="eeuu">EEUU</option>
+                        <option value="oriente">Medio Oriente</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="peru">Perú</option>
+                    </select> 
+                </div>
+
+                <div class="columna2">
+                    <label for="merch">Tipo de Mercancia</label>
+                    <input type="text" name="Mercancia" id="merch" required>
+                </div>
+
+                <div class="columna2">
+                    <label for="enterprise">Empresa</label>
+                    <input type="text" name="Empresa" id="enterprise" required>
+                </div>
+
+                <div class="columna2">
+                    <label for="adress">Dirección</label>
+                    <input type="text" name="Dirección" id="adress" required>
+                </div>
+
+                <div class="columna2">
+                    <label for="city">Ciudad</label>
+                    <input type="text" name="Ciudad" id="city" required>
+                </div>
+            </div>
+        </div> 
+    </section>
                 
                 <!--================= Footer y barra móvil ================-->
                 
@@ -144,7 +145,6 @@
         </div>
     </footer>
     <script src="script3.js"></script>
-   
         
     <script>
         const categoriaSelect = document.getElementById('categoria');

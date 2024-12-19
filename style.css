@@ -25,6 +25,7 @@ html{
     font-size: 3rem;
     padding: 2rem;
 }
+
 /**============================================
  *               Header
  *=============================================**/
@@ -79,6 +80,7 @@ html{
     height: 24px; /* Ajusta el tamaño deseado */
     margin-top: -4px;
 }
+
 /**============================================
  *               Banner
  *=============================================**/
@@ -105,6 +107,7 @@ html{
     width: 700px;
     font-size: 1.5rem;
 }
+
 /**============================================
  *               Contenido
  *=============================================**/
@@ -121,6 +124,7 @@ html{
     gap: 2rem;
     margin-bottom: 3rem;
 }
+
 /**============================================
  *               Servicios
  *=============================================**/
@@ -151,7 +155,12 @@ html{
  *               Formulario
  *=============================================**/
 .form{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content{
     background: linear-gradient(
         50deg,
         #e12323,
@@ -163,7 +172,8 @@ html{
     padding: 50px;
     width: 1000px;
     border-radius: 25px;
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .form form {
@@ -191,17 +201,13 @@ html{
     display: flex;
     flex-direction: column;
     gap: 10px; /* Espaciado entre elementos dentro de una columna */
-    width: 50%;
+    width: 100%;
 }
 
 .columna label {
     font-size: 17px;
     color: white;
     margin-bottom: 10px;
-}
-
-.hidden {
-    display: none;
 }
 
 input , textarea{
@@ -241,9 +247,40 @@ option {
     color: #333;
 }
 
+.import-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/*================== Tarjetas de servicios =================*/
+.form2-content {
+    background: linear-gradient(
+        180deg,
+        #007cdc50,
+        #fe834450);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    width: 1000px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
 
+.columna2 {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre elementos dentro de una columna */
+    width: 100%;
+}
+.columna2 select{
+    margin-bottom: 10px;
+}
+
+/**============================================
+ *               Servicios
+ *=============================================**/
 .category-importacion{
     background-image: linear-gradient(#00000080, #00000080), url(images/back-containers.png);
     background-size: cover;
@@ -343,6 +380,7 @@ option {
 .footer p{
     color: white;
 }
+
 /**============================================
  *               Barra móvil
  *=============================================**/
@@ -410,7 +448,6 @@ option {
 /**============================================
  *               servicios html
  *=============================================**/
-
 main.description-services {
     margin: 20px auto;
     padding: 20px;
