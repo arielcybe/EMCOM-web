@@ -38,43 +38,59 @@
             </div>
         </section>
     </header>
-
+    
     <main class="form">
-
-        <div class="form-content">
+        
+        <div class="form-content"> 
             <h2>Cotizador</h2>
-            <form>
-              
-                    <label for="name">Nombre</label>
-                    <input type="text" name="Nombre" id="name" required>
-    
-                    <label for="email">Correo electrónico</label>
-                    <input type="text" name="Correo" id="email" required>
-    
-                    <label for="enterprise">Empresa</label>
-                    <input type="text" name="Empresa" id="enterprise" required>
-    
-                    <label for="adress">Dirección</label>
-                    <input type="text" name="Dirección" id="adress" required>
-    
-                    <label for="city">Ciudad</label>
-                    <input type="text" name="Ciudad" id="city" required>
-    
-                    <label for="phone">Teléfono</label>
-                    <input type="text" name="Teléfono" id="phone" required>  
-             
-                      
-                            <label for="categoria">Servicio</label>
-                            <select name="categoria" id="categoria">
-                                <option value="">-- Selecciona una opción --</option>
-                                <option value="importacion">Importación</option>
-                                <option value="training">Capacitación</option>
-                                <option value="certification">Certificación</option>
-                                <option value="laws">Temas legales y patentes</option>
-                                <option value="countable">Contabilidad</option>
-                            </select>
+                <form>
+                    <div class="columna">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="Nombre" id="name" required>
+                    </div>
+                    
+                    <div class="columna">
+                        <label for="email">Correo electrónico</label>
+                        <input type="text" name="Correo" id="email" required>
+                    </div>
+                    
+                    <div class="columna">
+                        <label for="enterprise">Empresa</label>
+                        <input type="text" name="Empresa" id="enterprise" required>
+                    </div>
+                    
+                    <div class="columna">
+                        <label for="adress">Dirección</label>
+                        <input type="text" name="Dirección" id="adress" required>
+                    </div>
+                    
+                    <div class="columna">
+                        <label for="city">Ciudad</label>
+                        <input type="text" name="Ciudad" id="city" required>
+                    </div>
+                    
+                    
+                    <div class="columna">
+                       <label for="phone">Teléfono</label>
+                       <input type="text" name="Teléfono" id="phone" required> 
+                    </div>
+                    
+                    
+                            <div class="columna">
+                                <label for="categoria">Servicio</label>
+                                    <select name="categoria" id="categoria">
+                                        <option value="">-- Selecciona una opción --</option>
+                                        <option value="importacion">Importación</option>
+                                        <option value="training">Capacitación</option>
+                                        <option value="certification">Certificación</option>
+                                        <option value="laws">Temas legales y patentes</option>
+                                        <option value="countable">Contabilidad</option>
+                                    </select>
+                            </div>
+
+                        <div class="columna">
                             <div id="section-importacion" class="hidden">
-                                <label for="pais">País</label>
+                                    <label for="pais">País</label>
                                 <select name="pais" id="pais">
                                     <option value="">-- Selecciona un país --</option>
                                     <option value="chile">Chile</option>
@@ -82,18 +98,27 @@
                                     <option value="mexico">México</option>
                                 </select>
                             </div>
-            </form>
+                        </div>
+                            
+                        <div class="columna">
+                            <div id="section-merch" class="hidden">
+                                <label for="merch">Tipo de Mercancia</label>
+                                <input type="text" name="Mercancia" id="merch" required>
+                            </div>
+                        </div>          
+                </form>
         </div>
+           
     </main> 
-
-    <!--================= Footer y barra móvil ================-->
-
-    <div class="barra">
-        <div class="direccion">
-            <p>Av. Nueva Providencia 1363. oficina 1102 (visitas previa coordinación) | +56 9 5008 2437</p>
-        </div>
-        <div class="redes">
-            <ul class="container-redes">
+                
+                <!--================= Footer y barra móvil ================-->
+                
+                <div class="barra">
+                    <div class="direccion">
+                        <p>Av. Nueva Providencia 1363. oficina 1102 (visitas previa coordinación) | +56 9 5008 2437</p>
+                    </div>
+                    <div class="redes">
+                    <ul class="container-redes">
                 <li><a href="#"><img src="images/whatsapp-circle.png" alt="ws"></a></li>
                 <li><a href="#"><img src="images/instagram-circle.png" alt="ws"></a></li>
                 <li><a href="#"><img src="images/youtube-circle.png" alt="ws"></a></li>
@@ -105,12 +130,12 @@
         </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
-                    <ellipse cx="12" cy="12" rx="10.5" ry="10.5" fill="#007cdc" />
-                    <path d="M15.5,12L12,8L8.5,12" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M15.5,17L12,13L8.5,17" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg></a>
+                <ellipse cx="12" cy="12" rx="10.5" ry="10.5" fill="#007cdc" />
+                <path d="M15.5,12L12,8L8.5,12" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+                <path d="M15.5,17L12,13L8.5,17" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></a>
         </div>
     </div>
     <footer class="footer">
@@ -119,18 +144,25 @@
         </div>
     </footer>
     <script src="script3.js"></script>
+   
+        
     <script>
         const categoriaSelect = document.getElementById('categoria');
         const sectionImportacion = document.getElementById('section-importacion');
+        const sectionMerch = document.getElementById('section-merch');
         // Evento para mostrar la sección correspondiente
         categoriaSelect.addEventListener('change', () => {
             if (categoriaSelect.value === 'importacion') {
                 sectionImportacion.classList.remove('hidden');
+                sectionMerch.classList.remove('hidden');
             } else {
                 sectionImportacion.classList.add('hidden');
+                sectionMerch.classList.add('hidden')
             }
+
         });
     </script>
+    
 </body>
 
 </html>

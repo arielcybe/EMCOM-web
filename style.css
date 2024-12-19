@@ -186,7 +186,19 @@ html{
     display: flex;
 }
 
+.columna {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre elementos dentro de una columna */
+    width: 50%;
+}
 
+.columna label {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 10px;
+}
 
 .hidden {
     display: none;
