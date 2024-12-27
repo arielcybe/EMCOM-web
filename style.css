@@ -221,6 +221,18 @@ input , textarea{
     border-radius: 10px;
 }
 
+button{
+    background-color: #007cdc;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 17px 14px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
 select {	
     width: 100%;
     padding: 10px; /* Espaciado interno */
@@ -247,7 +259,7 @@ option {
     color: #333;
 }
 
-.import-form {
+.formularios-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,7 +287,7 @@ option {
     width: 100%;
 }
 .columna2 select{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /**============================================

@@ -25,12 +25,12 @@
                         <nav class="navbar container">
                             <ul class="menu">
                                 <li><a href="servicios.html">Servicios</a></li>
-                                <li><a href="#">Cursos</a></li>
+                                <!--<li><a href="#">Cursos</a></li>--->
                                 <li><a href="formulario.html">Cotiza con nosotros</a></li>
-                                <li><a href="#"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
-                                <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
-                                <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
-                                <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=56933109039"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
+                                <li><a href="https://www.instagram.com/emprendecomex/"><img src="images/instagram.png" alt="instagram"></a></li>
+                                <li><a href="https://www.youtube.com/@emprendecomex6609/videos"><img src="images/youtube.png" alt="youtube"></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100063898185610"><img src="images/facebook.png" alt="facebook"></a></li>
                             </ul>
                         </nav>
                     </div> 
@@ -42,7 +42,7 @@
     <main class="form">
         <div class="form-content"> 
             <h2>Cotizador</h2>
-            <form>
+            <form class="formulario-form">
                 <div class="columna">
                     <label for="name">Nombre</label>
                     <input type="text" name="Nombre" id="name" required>
@@ -55,7 +55,7 @@
                 
                 <div class="columna">
                    <label for="phone">Teléfono</label>
-                   <input type="text" name="Teléfono" id="phone" required> 
+                   <input type="number" name="Teléfono" id="phone" required> 
                 </div>
                 
                 <div class="columna">
@@ -65,7 +65,7 @@
                         <option value="importacion">Importación</option>
                         <option value="training">Capacitación</option>
                         <option value="certification">Certificación</option>
-                        <option value="laws">Temas legales y patentes</option>
+                        <option value="laws">Asesorias y Causas Legales</option>
                         <option value="countable">Contabilidad</option>
                     </select>
                 </div>           
@@ -73,57 +73,177 @@
         </div>
     </main>
 
-    <section class="import-form">
-        <div class="form2-content">
+    <section>
+        <form class="formularios-form">
+            <!--================= Importacion ================-->
             <div id="section-importacion" class="hidden">
-                <div class="columna2 columpais">
-                    <label for="pais">País</label>
-                    <select name="pais" id="pais">
-                        <option value="">-- Seleccionar país de importe --</option>
-                        <option value="china">China</option>
-                        <option value="eeuu">EEUU</option>
-                        <option value="oriente">Medio Oriente</option>
-                        <option value="argentina">Argentina</option>
-                        <option value="colombia">Colombia</option>
-                        <option value="peru">Perú</option>
-                    </select> 
-                </div>
-
-                <div class="columna2">
-                    <label for="merch">Tipo de Mercancia</label>
-                    <input type="text" name="Mercancia" id="merch" required>
-                </div>
-
-                <div class="columna2">
-                    <label for="enterprise">Empresa</label>
-                    <input type="text" name="Empresa" id="enterprise" required>
-                </div>
-
-                <div class="columna2">
-                    <label for="adress">Dirección</label>
-                    <input type="text" name="Dirección" id="adress" required>
-                </div>
-
-                <div class="columna2">
-                    <label for="city">Ciudad</label>
-                    <input type="text" name="Ciudad" id="city" required>
+                <div class="form2-content">
+                    <div class="columna2">
+                        <label for="pais">País</label>
+                        <select name="pais" id="pais">
+                            <option value="">-- Seleccionar país de importe --</option>
+                            <option value="china">China</option>
+                            <option value="eeuu">EEUU</option>
+                            <option value="oriente">Medio Oriente</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="peru">Perú</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="adress">dirección</label>
+                        <input type="text" name="Dirección" id="adress" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="city">ciudad</label>
+                        <input type="text" name="Ciudad" id="city" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="enterprise">empresa</label>
+                        <input type="text" name="Empresa" id="enterprise" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="merch">Tipo de mercancia</label>
+                        <input type="text" name="Mercancia" id="merch" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="clausula">Cláusula de Compra</label>
+                        <select name="clausula" id="clausula">
+                            <option value="">-- Seleccionar cláusula --</option>
+                            <option value="exw">EXW</option>
+                            <option value="fob">FOB</option>
+                            <option value="fca">FCA</option>
+                            <option value="cif">CIF</option>
+                            <option value="ddp">DDP</option>
+                            <option value="dap">DAP</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="merc">Valor mercancia</label>
+                        <input type="text" name="merc" id="merc" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="kilos">Kilos brutos</label>
+                        <input type="text" name="kilos" id="kilos" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="carga">Carga</label>
+                        <select name="carga" id="carga">
+                            <option value="">-- Seleccionar tipo de carga --</option>
+                            <option value="lcl">LCL</option>
+                            <option value="flc">FLC</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="kilos">Dirección de retiro de carga en el exterior</label>
+                        <input type="text" name="kilos" id="kilos" required>
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="clausula">Medio de transporte</label>
+                        <select name="clausula" id="clausula">
+                            <option value="">-- Seleccionar Transporte --</option>
+                            <option value="aire">Aereo</option>
+                            <option value="mar">Marítimo</option>
+                            <option value="tierra">Terrestre</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="clausula">Nesecita seguro</label>
+                        <select name="clausula" id="clausula">
+                            <option value="">-- Seleccionar Opción --</option>
+                            <option value="yes">Si</option>
+                            <option value="no">No</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="clausula">¿Cuenta con certificado de origen?</label>
+                        <select name="clausula" id="clausula">
+                            <option value="">-- Seleccionar cláusula --</option>
+                            <option value="yes2">Si</option>
+                            <option value="no2">No</option>
+                        </select> 
+                    </div>
+    
+                    <div class="columna2">
+                        <label for="clausula">¿Nesecita flete interno?</label>
+                        <select name="clausula" id="clausula">
+                            <option value="">-- Seleccionar cláusula --</option>
+                            <option value="yes3">Si</option>
+                            <option value="no3">No</option>
+                        </select> 
+                    </div>
+                    <div class="columna2">
+                        <button id="submitAll">Enviar</button>
+                    </div>
                 </div>
             </div>
-        </div> 
+            <!--================= Capacitación ================-->
+            <div id="section-training" class="hidden">
+                <div class="form2-content">
+                    <div class="columna2">
+                        <label for="detalles-curso">Detalles</label>
+                        <textarea name="detalles" id="detalles" cols="30" rows="10" required></textarea> <!-- 1050 caracteres --->
+                        <button id="submitAll">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <!--================= Certificación ================-->
+            <div id="section-certification" class="hidden">
+                <div class="form2-content">
+                    <div class="columna2">
+                        <label for="detalles-curso">Detalles</label>
+                        <textarea name="detalles" id="detalles" cols="30" rows="10" required></textarea>
+                        <button id="submitAll">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <!--================= Asesorias ================-->
+            <div id="section-laws" class="hidden">
+                <div class="form2-content">
+                    <div class="columna2">
+                        <label for="detalles-curso">Detalles</label>
+                        <textarea name="detalles" id="detalles" cols="30" rows="10" required></textarea>
+                        <button id="submitAll">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <!--================= Contables ================-->
+            <div id="section-countable" class="hidden">
+                <div class="form2-content">
+                    <div class="columna2">
+                        <label for="detalles-curso">Detalles</label>
+                        <textarea name="detalles" id="detalles" cols="30" rows="10" required></textarea>
+                        <button id="submitAll">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </section>
                 
-                <!--================= Footer y barra móvil ================-->
+    <!--================= Footer y barra móvil ================-->
                 
-                <div class="barra">
-                    <div class="direccion">
-                        <p>Av. Nueva Providencia 1363. oficina 1102 (visitas previa coordinación) | +56 9 5008 2437</p>
-                    </div>
-                    <div class="redes">
-                    <ul class="container-redes">
-                <li><a href="#"><img src="images/whatsapp-circle.png" alt="ws"></a></li>
-                <li><a href="#"><img src="images/instagram-circle.png" alt="ws"></a></li>
-                <li><a href="#"><img src="images/youtube-circle.png" alt="ws"></a></li>
-                <li><a href="#"><img src="images/facebook-circle.png" alt="ws"></a></li>
+    <div class="barra">
+            <div class="direccion">
+                <p>Av. Nueva Providencia 1363. oficina 1102 (visitas previa coordinación) | +56 9 5008 2437</p>
+            </div>
+            <div class="redes">
+            <ul class="container-redes">
+                <li><a href="https://api.whatsapp.com/send?phone=56933109039"><img src="images/whatsapp-circle.png" alt="ws"></a></li>
+                <li><a href="https://www.instagram.com/emprendecomex/"><img src="images/instagram-circle.png" alt="ws"></a></li>
+                <li><a href="https://www.youtube.com/@emprendecomex6609/videos"><img src="images/youtube-circle.png" alt="ws"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100063898185610"><img src="images/facebook-circle.png" alt="ws"></a></li>
             </ul>
         </div>
         <div class="cotizar-bottom">
@@ -149,18 +269,72 @@
     <script>
         const categoriaSelect = document.getElementById('categoria');
         const sectionImportacion = document.getElementById('section-importacion');
-        const sectionMerch = document.getElementById('section-merch');
+        const sectionCapacitacion = document.getElementById('section-training');
+        const sectionCertificacion = document.getElementById('section-certification');
+        const sectionAsesorias = document.getElementById('section-laws');
+        const sectionContabilidad = document.getElementById('section-countable');
         // Evento para mostrar la sección correspondiente
         categoriaSelect.addEventListener('change', () => {
             if (categoriaSelect.value === 'importacion') {
                 sectionImportacion.classList.remove('hidden');
-                sectionMerch.classList.remove('hidden');
-            } else {
+                sectionCapacitacion.classList.add('hidden');
+                sectionCertificacion.classList.add('hidden');
+                sectionAsesorias.classList.add('hidden');
+                sectionContabilidad.classList.add('hidden');
+            }else if (categoriaSelect.value === 'training') {
                 sectionImportacion.classList.add('hidden');
-                sectionMerch.classList.add('hidden')
+                sectionCapacitacion.classList.remove('hidden');
+                sectionCertificacion.classList.add('hidden');
+                sectionAsesorias.classList.add('hidden');
+                sectionContabilidad.classList.add('hidden');
+            }else if (categoriaSelect.value === 'certification') {
+                sectionImportacion.classList.add('hidden');
+                sectionCapacitacion.classList.add('hidden');
+                sectionCertificacion.classList.remove('hidden');
+                sectionAsesorias.classList.add('hidden');
+                sectionContabilidad.classList.add('hidden');
+            }else if (categoriaSelect.value === 'laws') {
+                sectionImportacion.classList.add('hidden');
+                sectionCapacitacion.classList.add('hidden');
+                sectionCertificacion.classList.add('hidden');
+                sectionAsesorias.classList.remove('hidden');
+                sectionContabilidad.classList.add('hidden');
+            }else if (categoriaSelect.value === 'countable') {
+                sectionImportacion.classList.add('hidden');
+                sectionCapacitacion.classList.add('hidden');
+                sectionCertificacion.classList.add('hidden');
+                sectionAsesorias.classList.add('hidden');
+                sectionContabilidad.classList.remove('hidden');
+            }else {
+                sectionImportacion.classList.add('hidden');
+                sectionCapacitacion.classList.add('hidden');
+                sectionCertificacion.classList.add('hidden');
+                sectionAsesorias.classList.add('hidden');
+                sectionContabilidad.classList.add('hidden');
             }
 
         });
+
+    document.querySelector('submitAll').addEventListener('click', function(event) {
+        event.preventDefault();  // Evita que se envíe el formulario por defecto
+
+        // Encuentra la sección visible
+        const visibleSection = document.querySelector('.formularios-form > div:not(.hidden)');
+        const form1 = document.getElementById("formulario-form");
+        const form2 = document.getElementById("formularios-form");
+    
+        // Verifica si ambos formularios son válidos
+        if (form1.checkValidity() && form2.checkValidity()) {
+                // Si son válidos, puedes enviar los formularios o realizar otra acción
+                console.log("Ambos formularios son válidos");
+                form1.submit();
+                form2.submit();
+            } else {
+                // Si alguno no es válido, dispara la validación HTML5
+                form1.reportValidity();
+                form2.reportValidity();
+            }
+    });
     </script>
     
 </body>

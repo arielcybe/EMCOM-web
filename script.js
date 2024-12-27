@@ -29,19 +29,3 @@ window.addEventListener('scroll', function(){
         barraMovil.classList.remove('active');
     }
 })
-
-// Elementos del DOM
-const categoriaSelect = document.getElementById('categoria');
-const sectionImportacion = document.getElementById('section-importacion');
-const sectionMerch = document.getElementById('section-merch');
-// Evento para cambiar la visibilidad del campo de país
-categoriaSelect.addEventListener('change', () => {
-    if (categoriaSelect.value === 'importacion') {
-        sectionImportacion.classList.remove('hidden');
-        sectionMerch.classList.remove('hidden');
-    } else {
-        sectionImportacion.classList.add('hidden');
-        sectionMerch.classList.add('hidden')
-    }
-
-});
