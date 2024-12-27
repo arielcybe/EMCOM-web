@@ -160,7 +160,7 @@ html{
     align-items: center;
 }
 
-.form-content{
+.form1{
     background: linear-gradient(
         50deg,
         #e12323,
@@ -182,14 +182,9 @@ html{
     flex-direction: column;
     gap: 10px; /* Espaciado entre elementos dentro de una columna */
     width: 50%;
-}	
-
-.form label {
-    font-size: 17px;
-    color: white;
-    margin-bottom: 10px;
 }
-.form-content h2{
+
+.form1 h2{
     color: white;
     font-size: 40px;
     margin-bottom: 25px;
@@ -201,7 +196,7 @@ html{
     display: flex;
     flex-direction: column;
     gap: 10px; /* Espaciado entre elementos dentro de una columna */
-    width: 100%;
+    width: 55%;
 }
 
 .columna label {
@@ -286,6 +281,7 @@ option {
     gap: 10px; /* Espaciado entre elementos dentro de una columna */
     width: 100%;
 }
+
 .columna2 select{
     margin-bottom: 20px;
 }
