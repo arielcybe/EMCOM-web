@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Formulario Básico</title>
+    <title>Cotizador-EMCOM</title>
     <style>
         .hidden {
             display: none;
@@ -26,7 +26,7 @@
                             <ul class="menu">
                                 <li><a href="servicios.html">Servicios</a></li>
                                 <!--<li><a href="#">Cursos</a></li>--->
-                                <li><a href="formulario.html">Cotiza con nosotros</a></li>
+                                <li><a href="formulario.php">Cotiza con nosotros</a></li>
                                 <li><a href="https://api.whatsapp.com/send?phone=56950082437"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
                                 <li><a href="https://www.instagram.com/emprendecomex/"><img src="images/instagram.png" alt="instagram"></a></li>
                                 <li><a href="https://www.youtube.com/@emprendecomex6609/videos"><img src="images/youtube.png" alt="youtube"></a></li>
@@ -40,22 +40,22 @@
     </header>
     
     <main class="form">
-        <form class="formularios-form" id="formulario-completo" action="send_email.php" method="POST">
+        <form class="formularios-form" id="formulario-completo" method="post">
             <div class="form1">
                 <h2>Cotizador</h2>
                 <div class="columna">
                     <label for="name">Nombre</label>
-                    <input type="text" name="Nombre" id="name" required>
+                    <input type="text" name="nombre" id="name" required>
                 </div>
                 
                 <div class="columna">
                     <label for="email">Correo electrónico</label>
-                    <input type="text" name="Correo" id="email" required>
+                    <input type="text" name="correo" id="email" required>
                 </div>
-                
+
                 <div class="columna">
-                   <label for="phone">Teléfono</label>
-                   <input type="number" name="Teléfono" id="phone" required> 
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" name="telefono" id="phone" required>
                 </div>
                 
                 <div class="columna">
@@ -76,8 +76,8 @@
                     <div class="form2-content">
                         <div class="columna2">
                             <label for="pais">País</label>
-                            <select name="pais" id="pais">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="pais" id="pais" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="china">China</option>
                                 <option value="eeuu">EEUU</option>
                                 <option value="oriente">Medio Oriente</option>
@@ -87,20 +87,20 @@
                             </select>
     
                             <label for="adress">dirección</label>
-                            <input type="text" name="Dirección" id="adress" required>
+                            <input type="text" name="dirección" id="adress" required>
     
                             <label for="city">ciudad</label>
-                            <input type="text" name="Ciudad" id="city" required>
+                            <input type="text" name="ciudad" id="city" required>
     
                             <label for="enterprise">empresa</label>
-                            <input type="text" name="Empresa" id="enterprise" required>
+                            <input type="text" name="empresa" id="enterprise" required>
     
                             <label for="merch">Tipo de mercancia</label>
-                            <input type="text" name="Mercancia" id="merch" required>
+                            <input type="text" name="mercancia" id="merch" required>
     
                             <label for="clausula">Cláusula de Compra</label>
-                            <select name="clausula" id="clausula">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="clausula" id="clausula" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="exw">EXW</option>
                                 <option value="fob">FOB</option>
                                 <option value="fca">FCA</option>
@@ -109,15 +109,15 @@
                                 <option value="dap">DAP</option>
                             </select>
     
-                            <label for="merc">Valor mercancia</label>
-                            <input type="text" name="merc" id="merc" required>
+                            <label for="valor">Valor mercancia</label>
+                            <input type="number" name="valor" id="valor" required>
     
                             <label for="kilos">Kilos brutos</label>
-                            <input type="text" name="kilos" id="kilos" required>
+                            <input type="number" name="kilos" id="kilos" required>
     
                             <label for="carga">Carga</label>
-                            <select name="carga" id="carga">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="carga" id="carga" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="lcl">LCL</option>
                                 <option value="flc">FLC</option>
                             </select>
@@ -126,30 +126,30 @@
                             <input type="text" name="kilos" id="kilos" required>
     
                             <label for="clausula">Medio de transporte</label>
-                            <select name="clausula" id="clausula">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="clausula" id="clausula" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="aire">Aereo</option>
                                 <option value="mar">Marítimo</option>
                                 <option value="tierra">Terrestre</option>
                             </select>
     
                             <label for="clausula">Nesecita seguro</label>
-                            <select name="clausula" id="clausula">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="clausula" id="clausula" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="yes">Si</option>
                                 <option value="no">No</option>
                             </select>
     
                             <label for="clausula">¿Cuenta con certificado de origen?</label>
-                            <select name="clausula" id="clausula">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="clausula" id="clausula" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="yes2">Si</option>
                                 <option value="no2">No</option>
                             </select>
     
                             <label for="clausula">¿Nesecita flete interno?</label>
-                            <select name="clausula" id="clausula">
-                                <option value="">-- Seleccionar opción --</option>
+                            <select name="clausula" id="clausula" required>
+                                <option selected disabled value="">-- Seleccionar opción --</option>
                                 <option value="yes3">Si</option>
                                 <option value="no3">No</option>
                             </select>
@@ -157,7 +157,7 @@
                             <label for="detalles-curso">Detalles adicionales</label>
                             <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="1050"></textarea> <!-- 1050 caracteres --->
     
-                            <button id="submitAll">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <div class="columna2">
                             <label for="detalles-curso">Detalles</label>
                             <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="1050" required></textarea>
-                            <button id="submitAll">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                         <div class="columna2">
                             <label for="detalles-curso">Detalles</label>
                             <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="1050" required></textarea>
-                            <button id="submitAll">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
                         <div class="columna2">
                             <label for="detalles-curso">Detalles</label>
                             <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="1050" required></textarea>
-                            <button id="submitAll">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
                         <div class="columna2">
                             <label for="detalles-curso">Detalles</label>
                             <textarea name="detalles" id="detalles" cols="30" rows="10" maxlength="1050" required></textarea>
-                            <button class="columna2" id="submitAlla">Enviar</button>
+                            <button type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -219,7 +219,7 @@
             </ul>
         </div>
         <div class="cotizar-bottom">
-            <a href="formulario.html">Cotiza aquí</a>
+            <a href="formulario.php">Cotiza aquí</a>
         </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -231,18 +231,16 @@
             </svg></a>
         </div>
     </div>
-    
     <footer class="footer">
         <div class="container container-footer">
             <p>Copyright © 2024 EMCOM | Funciona con EMCOM</p>
         </div>
     </footer>
-
     <script src="script3.js"></script>
         
     <script>
         const categoriaSelect = document.getElementById('categoria');
-        const form = document.getElementById('form1');
+        const form = document.getElementById('formulario-completo');
         const sections = document.querySelectorAll('.form2 > div');  // Todas las secciones secundarias
     
         // Función para mostrar u ocultar secciones y habilitar/deshabilitar campos
@@ -274,16 +272,9 @@
     
             toggleSections();
         });
-    
-        // Mostrar alerta al enviar el formulario
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();  // Evita el envío inmediato
-            alert('¡Formulario enviado con éxito! Nos pondremos en contacto pronto.');
-            form.submit();  // Envía el formulario después de la alerta
-        });
-    
-        // Desactivar campos inicialmente
-        toggleSections();
     </script>
+    <?php
+    include("enviar.php");
+    ?>
 </body>
 </html>
