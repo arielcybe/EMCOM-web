@@ -203,7 +203,38 @@
                 </div>
             </div>
         </form>
-    </main>      
+    </main> 
+    
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nombre = htmlspecialchars($_POST['nombre']);
+        $correo = htmlspecialchars($_POST['correo']);
+        $telefono = htmlspecialchars($_POST['telefono']);
+        $categoria = htmlspecialchars($_POST['categoria']);
+        $pais = htmlspecialchars($_POST['pais']);
+        $direccion = htmlspecialchars($_POST['direccion']);
+        $ciudad = htmlspecialchars($_POST['ciudad']);
+        $empresa = htmlspecialchars($_POST['empresa']);
+        $mercancia = htmlspecialchars($_POST['mercancia']);
+        $clausula = htmlspecialchars($_POST['clausula']);
+        $valor = htmlspecialchars($_POST['valor']);
+        $kilos = htmlspecialchars($_POST['kilos']);
+        $carga = htmlspecialchars($_POST['carga']);
+        $detalles = htmlspecialchars($_POST['detalles']);
+    
+        $to = "aguzman@utem.cl"; //cambiar por el mail de la empresa
+        $subject = "Cotización de $nombre";
+        $body = "Nombre: $nombre\nCorreo: $correo\nTeléfono: $telefono\nServicio: $categoria\nMensaje: $mensaje";
+        $headers = "From: $correo";
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo "<p>Mensaje enviado exitosamente.</p>";
+        } else {
+            echo "<p>Error al enviar el mensaje.</p>";
+        }
+    }
+    ?>
+    
     <!--================= Footer y barra móvil ================-->
                 
     <div class="barra">
