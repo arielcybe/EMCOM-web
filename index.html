@@ -19,7 +19,7 @@
                         <ul class="menu">
                             <li><a href="servicios.html">Servicios</a></li>
                             <!--<li><a href="#">Cursos</a></li>--->
-                            <li><a href="formulario.php">Cotiza con nosotros</a></li>
+                            <li><a href="formulario.html">Cotiza con nosotros</a></li>
                             <li><a href="https://api.whatsapp.com/send?phone=56950082437"><img src="images/whatsapp.png" alt="whatsapp"></a></li>
                             <li><a href="https://www.instagram.com/emprendecomex/"><img src="images/instagram.png" alt="instagram"></a></li>
                             <li><a href="https://www.youtube.com/@emprendecomex6609/videos"><img src="images/youtube.png" alt="youtube"></a></li>
@@ -89,7 +89,7 @@
             </ul>
         </div>
         <div class="cotizar-bottom">
-            <a href="formulario.php">Cotiza aquí</a>
+            <a href="formulario.html">Cotiza aquí</a>
         </div>
         <div class="subir-button">
             <a href="#"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -104,6 +104,38 @@
             <p>Copyright © 2024 EMCOM | Funciona con EMCOM</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+        /**============================================
+        *          Botones de desplazamiento
+        *=============================================**/
+        const containerServicios = document.querySelector('.container-categories');
+        const buttonLeft = document.querySelector('.button-left');
+        const buttonRight = document.querySelector('.button-right');
+
+        // Calcula el ancho de una tarjeta (100% del viewport)
+        const cardWidth = containerServicios.offsetWidth;
+
+        buttonLeft.addEventListener('click', () => {
+            containerServicios.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+
+        buttonRight.addEventListener('click', () => {
+            containerServicios.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+        /**============================================
+        *               Barra Móvil
+        *=============================================**/
+        let barraMovil = document.querySelector('.barra');
+
+        window.addEventListener('scroll', function(){
+    
+            if(window.scrollY > 0){
+                barraMovil.classList.add('active');
+            }
+            if(window.scrollY == 0){
+                barraMovil.classList.remove('active');
+            }
+        })
+    </script>
 </body>
 </html>
